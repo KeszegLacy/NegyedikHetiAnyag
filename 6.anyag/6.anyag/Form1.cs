@@ -41,12 +41,12 @@ namespace _6.anyag
 
         }
         */
-        public void XML()
+       /* public void XML()
         {
             var xml = new XmlDocument();
             xml.LoadXml(result);
 
-        }
+        }*/
 
         private void Form1_Load(object sender, EventArgs e)
         {
