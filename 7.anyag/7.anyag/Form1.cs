@@ -31,7 +31,7 @@ namespace _7.anyag
 
         
       
-        public List<Person> GetPopulation(string csvpath)
+        private List<Person> GetPopulation(string csvpath)
         {
             List<Person> population = new List<Person>();
 
@@ -74,7 +74,7 @@ namespace _7.anyag
             return birthProbabilities;
         }
 
-        public List<DeathProbability> GetDeathProbabilities(string csvpath)
+        public List<DeathProbability> GetDeathProbabilities (string csvpath)
         {
             List<DeathProbability> deathProbabilities = new List<DeathProbability>();
 
@@ -171,5 +171,21 @@ namespace _7.anyag
         {
 
         }
+    }
+
+    public class DeathProbability
+    {
+        public Gender Gender { get; set; }
+        public int Age { get; set; }
+        public double P { get; set; }
+    }
+
+    public class BirthProbability
+    {
+
+        public int Age { get; set; }
+        public int NbrOfChildren { get; set; }
+        public double P { get; set; }
+        public Gender Gender { get; internal set; }
     }
 }
